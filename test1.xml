@@ -47,27 +47,4 @@
       </block>
     </next>
   </block>
-  <block type="controls_repeat" id="1" inline="true" x="80" y="131">
-    <value name="TIMES">
-      <block type="math_number" id="2">
-        <field name="NUM">30</field>
-      </block>
-    </value>
-    <statement name="DO">
-      <block type="movement_forward" id="3">
-        <next>
-          <block type="robot_delay" id="4" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="5">
-                <field name="NUM">1000</field>
-              </block>
-            </value>
-          </block>
-        </next>
-      </block>
-    </statement>
-    <next>
-      <block type="movement_stop" id="6"></block>
-    </next>
-  </block>
 </xml>
