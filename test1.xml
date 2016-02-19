@@ -1,72 +1,25 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="led_select" id="38" inline="true" x="7" y="-175">
-    <field name="ACTION">ON</field>
-    <value name="LED">
-      <block type="math_number" id="64">
-        <field name="NUM">1</field>
+  <block type="controls_repeat" id="143" inline="true" x="-26" y="-131">
+    <value name="TIMES">
+      <block type="math_number" id="144">
+        <field name="NUM">30</field>
       </block>
     </value>
-    <next>
-      <block type="led_select" id="100" inline="true">
-        <field name="ACTION">ON</field>
-        <value name="LED">
-          <block type="math_number" id="124">
-            <field name="NUM">2</field>
-          </block>
-        </value>
+    <statement name="DO">
+      <block type="movement_reverse" id="172">
         <next>
-          <block type="led_select" id="91" inline="true">
-            <field name="ACTION">ON</field>
-            <value name="LED">
-              <block type="math_number" id="117">
-                <field name="NUM">3</field>
+          <block type="robot_delay" id="146" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="147">
+                <field name="NUM">1000</field>
               </block>
             </value>
-            <next>
-              <block type="led_select" id="82" inline="true">
-                <field name="ACTION">ON</field>
-                <value name="LED">
-                  <block type="math_number" id="110">
-                    <field name="NUM">4</field>
-                  </block>
-                </value>
-                <next>
-                  <block type="led_select" id="73" inline="true">
-                    <field name="ACTION">ON</field>
-                    <value name="LED">
-                      <block type="math_number" id="137">
-                        <field name="NUM">5</field>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="controls_repeat" id="143" inline="true">
-                        <value name="TIMES">
-                          <block type="math_number" id="144">
-                            <field name="NUM">30</field>
-                          </block>
-                        </value>
-                        <statement name="DO">
-                          <block type="movement_forward" id="145">
-                            <next>
-                              <block type="robot_delay" id="146" inline="true">
-                                <value name="DELAY">
-                                  <block type="math_number" id="147">
-                                    <field name="NUM">1000</field>
-                                  </block>
-                                </value>
-                              </block>
-                            </next>
-                          </block>
-                        </statement>
-                      </block>
-                    </next>
-                  </block>
-                </next>
-              </block>
-            </next>
           </block>
         </next>
       </block>
+    </statement>
+    <next>
+      <block type="movement_stop" id="188"></block>
     </next>
   </block>
 </xml>
